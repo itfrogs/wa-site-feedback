@@ -1,0 +1,120 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: site/plugins/feedback\n"
+"POT-Creation-Date: 2018-01-08 02:59+0300\n"
+"PO-Revision-Date: \n"
+"Last-Translator: site/plugins/feedback\n"
+"Language-Team: site/plugins/feedback\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Basepath: .\n"
+"Language: en_US\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+#: /wa-apps/site/plugins/feedback/templates/controls/feedback.html:5
+msgid "QR code"
+msgstr ""
+
+#: /wa-apps/site/plugins/feedback/templates/controls/feedback.html:9
+msgid "Technical support for this plugin"
+msgstr ""
+
+#: /wa-apps/site/plugins/feedback/lib/actions/siteFeedbackPluginFrontendSend.controller.php:20
+msgid "Captha is invalid"
+msgstr ""
+
+#: /wa-apps/site/plugins/feedback/lib/config/settings.php:6
+msgid "E-mail subject prefix"
+msgstr ""
+
+#: /wa-apps/site/plugins/feedback/lib/config/settings.php:5
+msgid "Message from customer:"
+msgstr ""
+
+#: /wa-apps/site/plugins/feedback/lib/config/settings.php:7
+msgid "If your form has a field with the name=\"subject\", then it will be added after the prefix."
+msgstr ""
+
+#: /wa-apps/site/plugins/feedback/lib/config/settings.php:12
+msgid "Ask for technical support"
+msgstr ""
+
+#: /wa-apps/site/plugins/feedback/lib/config/settings.php:13
+msgid "Click on the link to contact the developer."
+msgstr ""
+
+#: /wa-apps/site/plugins/feedback/lib/config/plugin.php:3
+msgid "Feedback form handler"
+msgstr ""
+
+#: /wa-apps/site/plugins/feedback/lib/actions/siteFeedbackPluginFrontendSend.controller.php:65
+msgid "Message from %s has been sent successfully"
+msgstr ""
+
+#: /wa-apps/site/plugins/feedback/lib/actions/siteFeedbackPluginFrontendSend.controller.php:68
+msgid "Message from %s not been sended"
+msgstr ""
+
+#: /wa-apps/site/plugins/feedback/lib/actions/siteFeedbackPluginFrontendSend.controller.php:78
+msgid "E-mail is invalid"
+msgstr ""
+
+#: /wa-apps/site/plugins/feedback/lib/config/settings.php:6
+msgid "E-mail from which the message will be sent"
+msgstr ""
+
+#: /wa-apps/site/plugins/feedback/lib/config/settings.php:13
+msgid "E-mail to which the message will be sent"
+msgstr ""
+
+#: /wa-apps/site/plugins/feedback/lib/config/settings.php:34
+msgid "Log sended e-mails"
+msgstr ""
+
+#: /wa-apps/site/plugins/feedback/lib/config/settings.php:7
+msgid "If you leave the field blank, the message will come from the buyer's mailbox. At the same time, the probability of getting into spam is high."
+msgstr ""
+
+#: /wa-apps/site/plugins/feedback/lib/config/settings.php:14
+msgid "If you leave the field blank, the message will come to default store mailbox."
+msgstr ""
+
+#: /wa-apps/site/plugins/feedback/lib/config/settings.php:26
+msgid "The customer left a message from {$email} through the feedback form:<br /><br />{$text}"
+msgstr ""
+
+#: /wa-apps/site/plugins/feedback/lib/config/settings.php:27
+msgid "Mail body"
+msgstr ""
+
+#: /wa-apps/site/plugins/feedback/lib/config/settings.php:28
+msgid "Set the mail body. Use Smarty.<br/>{$email} - Customer email.<br/>{$subject} - Email subject.<br/>{$text} - message text."
+msgstr ""
+
+#: /wa-apps/site/plugins/feedback/lib/config/settings.php:35
+msgid "If checked, sended e-mails will be logged."
+msgstr ""
+
+#: /wa-apps/site/plugins/feedback/lib/actions/siteFeedbackPluginFrontendSend.controller.php:79
+msgid "Site e-mail is invalid"
+msgstr ""
+
+#: /wa-apps/site/plugins/feedback/lib/actions/siteFeedbackPluginFrontendSend.controller.php:40
+msgid "Customer`s e-mail is invalid"
+msgstr ""
+
+#: /wa-apps/site/plugins/feedback/lib/actions/siteFeedbackPluginFrontendSend.controller.php:58
+msgid "Customer"
+msgstr ""
+
+#: /wa-apps/site/plugins/feedback/lib/config/settings.php:14
+msgid "Obligatory field. If it is not filled or not true, the plugin will not work."
+msgstr ""
+
+#: /wa-apps/site/plugins/feedback/lib/config/settings.php:28
+msgid "{$name} - Customer`s name."
+msgstr ""

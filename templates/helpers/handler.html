@@ -1,0 +1,113 @@
+{if !empty($captcha_selector)}
+    <div id="site-feedback-captcha-selector" style="display: none;">{$wa->captcha()}</div>
+{/if}
+
+<script>
+    $(function ($) {
+        var form_selector       = '{$form_selector}';
+        var captcha_selector    = '{$captcha_selector}';
+        var success_selector    = '{$success_selector}';
+        var error_selector      = '{$error_selector}';
+        var site_url            = '{$site_url}';
+
+        if (success_selector) {
+            $(success_selector).hide();
+        }
+
+        if (error_selector) {
+            $(error_selector).hide();
+        }
+
+        var $form = $(form_selector);
+
+        if (captcha_selector.length) {
+            $(captcha_selector).html($('#site-feedback-captcha-selector').html());
+        }
+
+        $form.on('submit', function ( event ) {
+            event.preventDefault();
+            var form = $(this).serialize();
+            var form_data = parseQuery(form);
+
+            var data = {
+                name:      '',
+                email:      '',
+                text:       '',
+                subject:    '',
+                captcha:     ''
+            };
+
+            for (var name in form_data) {
+                var $element = $(this).find('[name=' + name + ']');
+                var tagname = $element.get(0).tagName.toLowerCase();
+                var type = $element.attr('type');
+                var placeholder = $element.attr('placeholder');
+
+                if (type) {
+                    type = type.toLowerCase();
+                }
+
+                if (name && name.toLowerCase() == 'subject') {
+                    data.subject = form_data[name];
+                }
+                else if (name && name.toLowerCase() == 'captcha') {
+                    data.captcha = form_data[name];
+                }
+                else if (name && name.toLowerCase() == 'name') {
+                    data.name = form_data[name];
+                }
+                else if (name && name.toLowerCase() == 'email') {
+                    data.email = form_data[name];
+                }
+                else if (tagname == 'select') {
+                    data.text += form_data[name] + '<br /><br />';
+                }
+                else if (tagname == 'input' && type == 'radio') {
+                    data.text += form_data[name] + '<br /><br />';
+                }
+                else if (tagname == 'input' && type == 'checkbox') {
+                    data.text += form_data[name] + '<br /><br />';
+                }
+                else {
+                    if (placeholder) {
+                        data.text += '<strong>' + placeholder + ':</strong><br />';
+                        data.text += form_data[name] + '<br /><br />';
+                    }
+                }
+
+                //console.log(type + ' + ' + tagname + ' + ' +name +': ' +placeholder);
+            }
+
+            //var url = site_url + 'feedback/send/?' + form;
+            var url = site_url + 'feedback/send/';
+            $.post(
+                url,
+                data
+                , function (d) {
+                    if (d.status === 'ok') {
+                        if (success_selector) {
+                            $(success_selector).show();
+                        }
+                    }
+                    else {
+                        if (error_selector) {
+                            $(error_selector).show();
+                        }
+                    }
+                }, 'json'
+            );
+
+            return false;
+        });
+
+        function parseQuery(queryString) {
+            var query = {};
+            var pairs = (queryString[0] === '?' ? queryString.substr(1) : queryString).split('&');
+            for (var i = 0; i < pairs.length; i++) {
+                var pair = pairs[i].split('=');
+                query[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || '');
+            }
+            return query;
+        }
+    });
+</script>

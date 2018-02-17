@@ -1,0 +1,121 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: site/plugins/feedback\n"
+"POT-Creation-Date: 2018-01-08 02:59+0300\n"
+"PO-Revision-Date: \n"
+"Last-Translator: site/plugins/feedback\n"
+"Language-Team: site/plugins/feedback\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=((((n%10)==1)&&((n%100)!=11))?(0):(((((n%10)>=2)&&((n%10)<=4))&&(((n%100)<10)||((n%100)>=20)))?(1):2));\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Basepath: .\n"
+"Language: ru_RU\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+#: /wa-apps/site/plugins/feedback/templates/controls/feedback.html:5
+msgid "QR code"
+msgstr "QR код"
+
+#: /wa-apps/site/plugins/feedback/templates/controls/feedback.html:9
+msgid "Technical support for this plugin"
+msgstr "Техническая поддержка этого плагина"
+
+#: /wa-apps/site/plugins/feedback/lib/actions/siteFeedbackPluginFrontendSend.controller.php:20
+msgid "Captha is invalid"
+msgstr "Проверочный код введен не верно"
+
+#: /wa-apps/site/plugins/feedback/lib/config/settings.php:6
+msgid "E-mail subject prefix"
+msgstr "Префикс темы сообщения"
+
+#: /wa-apps/site/plugins/feedback/lib/config/settings.php:5
+msgid "Message from customer:"
+msgstr "Сообщение от покупателя: "
+
+#: /wa-apps/site/plugins/feedback/lib/config/settings.php:7
+msgid "If your form has a field with the name=\"subject\", then it will be added after the prefix."
+msgstr "Если ваша форма имеет поле с name=\"subject\", тогда значение этого поля будет добавлено после префикса как тема сообщения."
+
+#: /wa-apps/site/plugins/feedback/lib/config/settings.php:12
+msgid "Ask for technical support"
+msgstr "Запросить техническую поддержку"
+
+#: /wa-apps/site/plugins/feedback/lib/config/settings.php:13
+msgid "Click on the link to contact the developer."
+msgstr "Перейдите по ссылке, чтобы связаться с разработчиком."
+
+#: /wa-apps/site/plugins/feedback/lib/config/plugin.php:3
+msgid "Feedback form handler"
+msgstr "Обработчик формы обратной связи"
+
+#: /wa-apps/site/plugins/feedback/lib/actions/siteFeedbackPluginFrontendSend.controller.php:65
+msgid "Message from %s has been sent successfully"
+msgstr "Сообщение от %s было успешно доставлено"
+
+#: /wa-apps/site/plugins/feedback/lib/actions/siteFeedbackPluginFrontendSend.controller.php:68
+msgid "Message from %s not been sended"
+msgstr "Сообщение от %s не было доставлено"
+
+#: /wa-apps/site/plugins/feedback/lib/actions/siteFeedbackPluginFrontendSend.controller.php:78
+msgid "E-mail is invalid"
+msgstr "E-mail не верный"
+
+#: /wa-apps/site/plugins/feedback/lib/config/settings.php:6
+msgid "E-mail from which the message will be sent"
+msgstr "E-mail, с которого будет отправлено сообщение"
+
+#: /wa-apps/site/plugins/feedback/lib/config/settings.php:13
+msgid "E-mail to which the message will be sent"
+msgstr "E-mail на который будет отправлено сообщение"
+
+#: /wa-apps/site/plugins/feedback/lib/config/settings.php:34
+msgid "Log sended e-mails"
+msgstr "Записывать отправленные сообщения в лог"
+
+#: /wa-apps/site/plugins/feedback/lib/config/settings.php:7
+msgid "If you leave the field blank, the message will come from the buyer's mailbox. At the same time, the probability of getting into spam is high."
+msgstr "Если вы оставите поле пустым, то оно придет с ящика покупателя. При этом высока вероятность попадания в спам."
+
+#: /wa-apps/site/plugins/feedback/lib/config/settings.php:14
+msgid "If you leave the field blank, the message will come to default store mailbox."
+msgstr "Если вы оставите поле пустым, сообщение придет на почтовый ящик, который указан в настройках инсталлера. Если этих данных нет или ящик не валидный, сообщение не будет отправлено."
+
+#: /wa-apps/site/plugins/feedback/lib/config/settings.php:26
+msgid "The customer left a message from {$email} through the feedback form:<br /><br />{$text}"
+msgstr "Покупатель оставил сообщение с почтового ящика {$email} через форму обратной связи:<br /><br />{$text}"
+
+#: /wa-apps/site/plugins/feedback/lib/config/settings.php:27
+msgid "Mail body"
+msgstr "Тело сообщения"
+
+#: /wa-apps/site/plugins/feedback/lib/config/settings.php:28
+msgid "Set the mail body. Use Smarty.<br/>{$email} - Customer email.<br/>{$subject} - Email subject.<br/>{$text} - message text."
+msgstr "Задайте тело сообщения. Используйте Smarty.<br/>{$email} - Почтовый ящик покупателя.<br/>{$subject} - Тема сообщения.<br/>{$text} - текст сообщения."
+
+#: /wa-apps/site/plugins/feedback/lib/config/settings.php:35
+msgid "If checked, sended e-mails will be logged."
+msgstr "Если отмечено, то отправленные сообщения будут записаны в лог."
+
+#: /wa-apps/site/plugins/feedback/lib/actions/siteFeedbackPluginFrontendSend.controller.php:79
+msgid "Site e-mail is invalid"
+msgstr "E-mail сайта не верный"
+
+#: /wa-apps/site/plugins/feedback/lib/actions/siteFeedbackPluginFrontendSend.controller.php:40
+msgid "Customer`s e-mail is invalid"
+msgstr "E-mail покупателя не верен"
+
+#: /wa-apps/site/plugins/feedback/lib/actions/siteFeedbackPluginFrontendSend.controller.php:58
+msgid "Customer"
+msgstr "Покупатель"
+
+#: /wa-apps/site/plugins/feedback/lib/config/settings.php:14
+msgid "Obligatory field. If it is not filled or not true, the plugin will not work."
+msgstr "Обязательное поле. Если оно не заполнено или не верно, плагин работать не будет."
+
+#: /wa-apps/site/plugins/feedback/lib/config/settings.php:28
+msgid "{$name} - Customer`s name."
+msgstr "{$name} - Имя покупателя."
