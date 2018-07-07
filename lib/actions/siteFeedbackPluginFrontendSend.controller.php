@@ -36,7 +36,7 @@ class siteFeedbackPluginFrontendSendController extends waJsonController
             $pass = false;
         }
 
-        if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
+        if (isset($data['email']) && !filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
             $this->setError(_wp('Customer`s e-mail is invalid'));
             $pass = false;
         }
