@@ -15,6 +15,12 @@ class siteFeedbackPluginFrontendSendController extends waJsonController
     {
         $data = waRequest::post();
 
+        if (!empty($data)) {
+            foreach ($data as $key => $value) {
+                $data[$key] = urldecode($value);
+            }
+        }
+
         /**
          * @var siteFeedbackPlugin $plugin
          */
@@ -49,7 +55,9 @@ class siteFeedbackPluginFrontendSendController extends waJsonController
             }
         }
 
-        waLog::dump($data, 'site-feedback.log');
+        if (!isset($data['email']) || empty($data['email'])) {
+            $data['email'] = $to;
+        }
 
         if (isset($data['name']) && !empty($data['name'])) {
             $name = $data['name'];
