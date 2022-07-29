@@ -29,6 +29,9 @@ class siteFeedbackPluginFrontendSendController extends waJsonController
 
         $pass = true;
 
+        $settings['to'] = trim($settings['to']);
+        $settings['from'] = trim($settings['from']);
+
         if (!filter_var($settings['to'], FILTER_VALIDATE_EMAIL)) {
             $this->setError(_wp('Site e-mail is invalid'));
             $pass = false;
@@ -40,6 +43,10 @@ class siteFeedbackPluginFrontendSendController extends waJsonController
         if (isset($data['captcha']) && !wa()->getCaptcha()->isValid($data['captcha'])) {
             $this->setError(_wp('Captha is invalid'));
             $pass = false;
+        }
+
+        if (isset($data['email'])) {
+            $data['email'] = trim($data['email']);
         }
 
         if (isset($data['email']) && !filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
