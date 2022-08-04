@@ -31,10 +31,10 @@
 
             var data = {
                 name:      '',
-                //email:      '',
+                email:      '',
                 text:       '',
-                subject:    ''
-                //captcha:     ''
+                subject:    '',
+                captcha:     ''
             };
 
             for (var name in form_data) {
@@ -51,6 +51,9 @@
                     data.subject = form_data[name];
                 }
                 else if (name && name.toLowerCase() == 'captcha') {
+                    data.captcha = form_data[name];
+                }
+                else if (name && name.toLowerCase() == 'g-recaptcha-response') {
                     data.captcha = form_data[name];
                 }
                 else if (name && name.toLowerCase() == 'name') {
